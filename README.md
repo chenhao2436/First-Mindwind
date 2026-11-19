@@ -1,7 +1,18 @@
 # First Mindwind Android
 
-Source archive and GitHub Actions build pipeline for the personal Android English-learning app.
+Personal Android English-learning application.
 
-The Android project is stored in `FirstMindwind-source.tar.gz`. The workflow extracts it and builds a debug APK, then publishes the APK as a downloadable workflow artifact.
+The Android source project is packaged in `FirstMindwind-source.tar.xz.b64`. GitHub Actions decodes and extracts the archive, builds a debug APK, verifies that it exists, and uploads it as the workflow artifact `First-Mindwind-Android-APK`.
 
-No API key is stored in this repository. Configure a newly rotated DeepSeek API key inside the app.
+## Build locally
+
+- JDK 17
+- Android SDK Platform 35
+- Android Build Tools 35.0.0
+- Gradle 8.9
+
+The app does not contain an API key. Revoke any key previously pasted into chat and configure a newly created DeepSeek key in the app's Settings screen.
+
+## Build artifact
+
+After a successful run, open Actions → Build First Mindwind APK → Artifacts → First-Mindwind-Android-APK.
